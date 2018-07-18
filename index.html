@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Password Generator</title>
+        
+        <!--        meta-->
+        
+        <meta charset="UTF-8">
+        <meta name="description" content="Open Source Password Generator on Github">
+        <meta name="keywords" content="Free, Best, Password, Generator, Github, Open Source, JS, gaurav, sachdeva, arav">
+        <meta name="author" content="Gaurav Sachdeva">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+<!--        styles-->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body onload="changeLength(15)">
+    <header>
+        <h1>Random Password Generator</h1>    
+    </header>
+        <hr>
+        
+        <div id="container">
+            <h2>Click on the password to copy!</h2><br>&nbsp;<br>
+        <code id="pwd" onclick="copy()">Loading...</code><br>
+           &nbsp; <br>
+      <input type="range" min="6" max="50" value="15" class="slider" id="pwdRange" onchange="changeLength()" >
+                                    <br>Length: <span id="lengthVal"> </span> [<span id="rating">Waiting...</span>]
+
+            <br>&nbsp;<br>
+            
+        <button onclick="changeLength()" name="Submit" id="btn">Generate a new Random Password</button>
+            <br>&nbsp;<br>
+            <p>Password length of minimum 15 characters is recommended.</p>
+
+        </div>
+        
+<footer id="footer">Gaurav Sachdeva | 
+    <a href="http://arav.ga?git=emlverify" target="_blank" id="footerlink" >Blog</a> |
+        <a href="http://github.com/iamarav" target="_blank" id="footerlink" >Github</a> | 2018 </footer>
+        
+        
+        
+            
+    <script src="js/script.js"></script>
+    </body>
+    
+</html>

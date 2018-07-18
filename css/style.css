@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+:root{
+    --padding: 3%;
+    --primcolor: forestgreen;
+    --acccolor: white;
+      
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-color: white;
+        font-size: 0.5em;
+    }
+    
+    header{
+    background-color: var(--primcolor);
+    }
+
+    header h1{
+    padding: 1% !important;
+    color: var(--acccolor);
+    }
+
+    #container{
+    margin: 1% !important;
+    padding: 10px !important;
+    width: 96% !important;
+    text-align: center!important;
+    border: none !important;
+    
+    }
+    
+    footer{
+    bottom: 0px;
+    padding: 1%;
+    background-color: transparent !important;
+    color: black !important;
+    width: 100%;
+    }
+
+    a:link, a:visited{
+        color: black !important;
+    }
+    
+}
+
+
+body{
+    
+}
+
+header{
+    background-color: var(--primcolor);
+}
+
+header h1{
+    padding: var(--padding);
+    color: var(--acccolor);
+}
+
+#container{
+    border: 1px solid var(--primcolor);
+    margin: 1%;
+    padding: 10px;
+    width: 96%;
+    text-align: center;
+    height: 50vh;
+}
+
+#pwd{
+    font-family: monospace;
+    background-color: lightsteelblue;
+    padding: 10px;
+}
+
+#btn{
+    border: 1px dashed black;
+    padding: 1%;
+    background-color: var(--primcolor);
+    color: var(--acccolor);
+}
+
+a:visited, a:link{
+    color: white;
+}
+
+footer{
+    bottom: 0px;
+    position: fixed;
+    padding: 1%;
+    background-color: var(--primcolor);
+    color: var(--acccolor);
+    width: 100%;
+}
+
