@@ -20,14 +20,13 @@ function genPass(length) {
     return true;
 }
 
-function copy(){
-
-var copyText = document.getElementById('pwd').innerHTML;
-//  copyText.select();
-  document.execCommand("copy");
-  alert("Copied the text: " + copyText);
-    console.log(document.getElementById('pwd').innerHTML);
-}
+       function copy() {
+             var range = document.createRange();
+             range.selectNode(document.getElementById("pwd"));
+             window.getSelection().removeAllRanges();
+             window.getSelection().addRange(range);
+             document.execCommand("copy")
+        }
 
 function changeLength(){
     var slider = document.getElementById("pwdRange");
