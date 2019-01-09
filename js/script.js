@@ -20,12 +20,13 @@ function genPass(length) {
     return true;
 }
 
-       function copy() {
+       function copy(randPass) {
              var range = document.createRange();
              range.selectNode(document.getElementById("pwd"));
              window.getSelection().removeAllRanges();
              window.getSelection().addRange(range);
-             document.execCommand("copy")
+             document.execCommand("copy");
+         alert('Copied the Password: '+randPass);
         }
 
 function changeLength(){
