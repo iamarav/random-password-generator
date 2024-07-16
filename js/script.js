@@ -1,45 +1,48 @@
-function genPass(length) {
-  var text = "";
-  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@!#$";
+function genPass(len = 15) {
+    const rating = document.getElementById("rating");
+    const randPass = document.getElementById("pwd");
+    const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@!#$";
+    const possibleLength = possible.length;
+    let text = "";
 
-  for (var i = 0; i < length; i++)
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
+    for (let i = 0; i < len; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possibleLength));
+    }
 
-    var randPass = document.getElementById('pwd').innerHTML = text;
+    randPass.textContent = text;
 
-    if(length<15){
-        rating.innerHTML = "Weak";
+    if (len < 15) {
+        rating.textContent = "Weak";
     }
-    else if(length<40){
-        rating.innerHTML = "Strong";
+    else if (len < 40) {
+        rating.textContent = "Strong";
     }
-    else{
-        rating.innerHTML = "Extra Strong";    
+    else {
+        rating.textContent = "Extra Strong";
     }
-    
+
     return true;
 }
 
-       function copy() {
-             var range = document.createRange();
-             range.selectNode(document.getElementById("pwd"));
-             window.getSelection().removeAllRanges();
-             window.getSelection().addRange(range);
-             document.execCommand("copy");
-         alert('Copy to Clipboard Success!');
-        }
+function copy() {
+    const range = document.createRange();
+    range.selectNode(document.getElementById("pwd"));
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
 
-function changeLength(){
-    var slider = document.getElementById("pwdRange");
-    var output = document.getElementById("lengthVal");
-    var rating = document.getElementById("rating");
-    output.innerHTML = slider.value;
-
-    slider.oninput = function() {
-    output.innerHTML = this.value;
-    
+    alert('Copy to Clipboard Success!');
 }
-    
+
+function changeLength() {
+    const slider = document.getElementById("pwdRange");
+    const output = document.getElementById("lengthVal");
+    output.textContent = slider.value;
+
+    slider.oninput = function () {
+        output.textContent = this.value;
+        genPass(this.value);
+    }
+
     genPass(slider.value);
 }
-

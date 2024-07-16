@@ -1,104 +1,88 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
-
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans', sans-serif;
-
+    font-family: 'PT Sans', system-ui, sans-serif;
 }
 
-:root{
+:root {
     --padding: 3%;
-    --primcolor: forestgreen;
-    --acccolor: white;
-      
+    --primary-color: teal;
+    --secondary-color: white;
+    --body-color: #fff;
 }
 
-@media screen and (max-width: 800px) {
-    body {
-        background-color: white;
-        font-size: 0.5em;
+@media screen and (max-width: 768px) {
+    #container {
+        margin: 1% !important;
+        padding: 10px !important;
+        width: 96% !important;
     }
-    
-    header{
-    background-color: var(--primcolor);
-    }
-
-    header h1{
-    padding: 1% !important;
-    color: var(--acccolor);
-    }
-
-    #container{
-    margin: 1% !important;
-    padding: 10px !important;
-    width: 96% !important;
-    text-align: center!important;
-    border: none !important;
-    
-    }
-    
-    footer{
-    bottom: 0px;
-    padding: 1%;
-    background-color: transparent !important;
-    color: black !important;
-    width: 100%;
-    }
-
-    a:link, a:visited{
-        color: black !important;
-    }
-    
 }
 
-
-body{
-    
+body {
+    background-color: var(--body-color);
 }
 
-header{
-    background-color: var(--primcolor);
+header {
+    background-color: var(--primary-color);
 }
 
-header h1{
+header h1 {
     padding: var(--padding);
-    color: var(--acccolor);
+    color: var(--secondary-color);
 }
 
-#container{
-    border: 1px solid var(--primcolor);
-    margin: 1%;
-    padding: 10px;
-    width: 96%;
-    text-align: center;
-    height: 50vh;
-}
-
-#pwd{
-    font-family: monospace;
-    background-color: lightsteelblue;
-    padding: 10px;
-}
-
-#btn{
+button {
     border: 1px dashed black;
     padding: 1%;
-    background-color: var(--primcolor);
-    color: var(--acccolor);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
 }
 
-a:visited, a:link{
+a:visited,
+a:link {
     color: white;
 }
 
-footer{
-    bottom: 0px;
+footer {
+    bottom: 0;
     position: fixed;
     padding: 1%;
-    background-color: var(--primcolor);
-    color: var(--acccolor);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     width: 100%;
 }
 
+#container {
+    margin: 1%;
+    padding: 10px;
+    text-align: center;
+    min-height: 50vh;
+}
+
+.d-block {
+    display: block;
+}
+
+.entry-title {
+    margin-bottom: 3rem;
+}
+
+.entry-content {
+    margin: 25px 0;
+}
+
+#pwd {
+    font-family: monospace;
+    background-color: rgb(188, 204, 226);
+    padding: 15px 20px;
+    font-size: 1rem;
+}
+
+.note {
+    color: #333;
+    font-style: italic;
+}
